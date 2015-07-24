@@ -1,0 +1,94 @@
+/*==================================
+Post Styles
+==================================*/
+
+.author-bio {
+  display: block;
+  margin-bottom: 30px;
+}
+.author-bio .author-avatar img {
+  height: 108px !important;
+  width: 108px !important;
+	float: left;
+  border-radius: 50%;
+}
+
+.author-bio .author-content {
+	margin-left: 132px;
+}
+
+.author-content p {
+	margin: 0 !important;
+}
+
+.author-content h4 {
+	margin-bottom: 15px !important;
+}
+
+@media screen and (max-width: 991px){
+  .author-bio .author-avatar img {
+    height: 72px !important;
+    width: 72px !important;
+  }
+
+  .author-bio .author-content {
+  	margin-left: 92px;
+  }
+}
+
+/*==================================
+Mobile Styles
+==================================*/
+
+.headshot {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*==================================
+CV Styles
+==================================*/
+
+#cv {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#cv h2, #cv h3, #cv h4, #cv h5 {
+  font-weight: 600;
+}
+
+#cv h4 {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+#cv h5 {
+  color: #aaaaaa;
+  font-size: 18px;
+}
+
+#cv p, #cv h4, #cv h5 {
+  padding-left: 40px;
+}
+
+#cv hr {
+  border-bottom: 1px solid #333;
+}
+
+#cv thead {
+  border-bottom: 1px solid #eee;
+}
+
+#cv ul {
+  padding-left: 50px;
+}
+
+#cv li {
+  list-style-type: disc;
+}
+
+.cv-divider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

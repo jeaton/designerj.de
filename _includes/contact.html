@@ -1,0 +1,79 @@
+ <section id="contact" class="clearfix bgColor2">
+    <div class="container">
+      <div class="row row-padding">
+        <div class="col-md-6 left-col wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+          <div class="heading">
+            <div class="title-style-3">
+              <div class="title-2">
+                <h2 class="text-uppercase">Contact</h2>
+                <span class="title-spt"></span>
+              </div>
+            </div>
+            <!-- <p class="subHeading"> We are nec pellentesque nulla laoreet etuis non aliquam.</p> -->
+          </div>
+          <div class="col-md-10" id="contact-form">
+            <form action="//formspree.io/jde.eaton@gmail.com" method="POST" class="contact-form-portfolio clearfix clearfix">
+              <div class="clearfix">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="visible input-group">
+                      <input type="hidden" name="_subject" value="Inquirey From The Web" />
+                      <input type="text" name="_gotcha" style="display:none" />
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="visible input-group">
+                      <input type="email" class="form-control" id="email" name="_replyto" placeholder="Email">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="clearfix">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="visible input-group">
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="visible input-group">
+                      <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="visible input-group">
+                    <textarea class="form-control" rows="10" id="comments" name="comments" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group last text-right">
+                  <input type="submit" class="submit btn btn-dark" value="Send">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeIn" data-wow-delay=".2s" data-wow-duration="1s">
+          <div class="address-bg right-col" data-background="images/home/main.jpg">
+            <div class="parallax-overlay bg-strip"></div>
+            <div class="address-block">
+              <address>
+              <p class="text-uppercase">1740 24th Street </p>
+              <p class="text-uppercase">Cuyahoga Falls, OH 44223</p>
+              {% include social.html %}
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

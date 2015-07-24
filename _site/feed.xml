@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JD Eaton Designer</title>
+    <description>Creative professional and inbound marketer crafting strategies in Cleveland and Akron, Ohio</description>
+    <link>http://designerj.de/</link>
+    <atom:link href="http://designerj.de/feed.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>

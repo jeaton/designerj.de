@@ -1,0 +1,26 @@
+# Site settings
+title: JD Eaton Designer
+email: jde.eaton@gmail.com
+description: "Creative professional and inbound marketer crafting strategies in Cleveland and Akron, Ohio"
+baseurl: ""
+url: "http://designerj.de"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Social media links
+social:
+  twitter:  https://twitter.com/designerjde
+  dribbble: https://dribbble.com/designerjde
+  linkedin: https://www.linkedin.com/in/jdeaton
+  behance: 
+  instagram: https://www.instagram.com/designerjde/
+  github: https://github.com/jeaton
+
+# Links to include in site navigation
+links:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog

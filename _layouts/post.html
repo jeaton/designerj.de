@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+<body id="page" data-spy="scroll" data-target=".navbar-nav" data-offset="80" class="appear-animate">
+  {% include preloader.html %}
+	{% include header.html %}
+<div>
+<section id="blog-main" class="clearfix bgColor2">
+  <div class="mainBanner parallax" id="blog-header" data-background="{{ page.image }}">
+    <div class="parallax-overlay bg-strip"></div>
+    <div class="container">
+      <div class="banner">
+        <div class="center-content">
+          <h2 class="text-uppercase">{{ page.title }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="pageWrapper" class="clearfix">
+  <div class="contentWrapper">
+    <section id="blog-main" class="clearfix bgColor2">
+      <div class="blog-body blog-inner clearfix">
+        <div class="container">
+          <div class="row row-padding">
+            <article class="posts clearfix">
+              <div class="post-meta-wrap-2 col-md-1">
+                <div class="post-meta">
+                  <div class="published-date">
+                    {{ page.date | date: "%d" }}
+                    <small class="text-uppercase">{{ page.date | date: "%b" }}</small>
+                  </div>
+                  {% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
+                    {% if page.shortUrl != null %}
+                        {% assign url = page.shortUrl %}
+                    {% endif %}
+                  <ul class="socials-connect">
+                    <li><a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ url }}&via=designerjde&hashtags={{ tagStr }}" onclick="window.open(this.href, 'child', 'scrollbars,width=650,height=500'); return false" title="Share this post on Twitter" class="page_social"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?t={{ page.title }}&u={{ url }}" onclick="window.open(this.href, 'child', 'scrollbars,width=650,height=500'); return false" title="Share this post on Facebook" class="page_social"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://www.linkedin.com/shareArticle?mini=true&title={{ page.title }}&url={{ url }}&source=http%3a%2f%2fzhangwenli.com" onclick="window.open(this.href, 'child', 'scrollbars,width=650,height=600'); return false" title="Share this post on LinkedIn" class="page_social"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="post-content-wrapper">
+                  <div class="post-content padding-top-30 no-padding-top-sm no-padding-left-sm no-padding-left-xs ">
+                    <article class="post-content">
+						          {{ content }}
+                    </article>
+                    {% assign author = site.data.authors[page.author] %}
+                    {% if author %}
+            				<article class="author-bio">
+            					<div class="author-avatar">
+            						<img src="{{ author.gravatar }}" alt="Avatar"/>
+            					</div>
+            					<div class="author-content">
+            						<h4 class="name">{{ author.name }}</h4>
+            						<p>{{ author.details }}</p>
+            					</div>
+            				</article>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <aside>
+                <div class="col-md-3">
+                  <div class="blog-siderbar">
+                    <div class="media-container">
+                      <h4 class="text-uppercase">Recent Posts</h4>
+                      {% for post in site.posts limit:4 %}
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="{{ post.url }}"> <img src="{{ post.image }}" class="media-object"> </a>
+                        </div>
+                        <div class="media-body">
+                          <div class="media-content">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                          </div>
+                         <!--  <p><span>{{ post.date | date: "%b %-d, %Y" }}</span></p> -->
+                        </div>
+                      </div>
+                      {% endfor %}
+                  </div>
+                </div>
+              </aside>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+{% include footer.html %}
+</body>
+</html>

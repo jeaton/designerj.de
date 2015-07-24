@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.2
+install: gem install jekyll
+script: jekyll build
+deploy:
+  provider: s3
+  access_key_id: AKIAIYHBXQM6JN2ACWOQ
+  secret_access_key:
+    secure: Z7ffJ3j1poUUJpU7QmsulpCnSf99VNqJZwYrEl7C8nizwTlJHGq0PMvYp7zQ6CEpcO6gGI7iyK+xN8UZx0QD31X758eLfNHZ8G8syE22S7vGfeYg7WTJ55Yp8m9aoj2GU+Ik76MM9spll76DPw8m8iqN5hSPm7Bmqr+X5LrQykzZNVnCFwaQ2FFVz/e47Ba8T4mrUkcuYzbWMANrSfKPMGbb3v+K1e55bW/xM7HDWuLnbnkig6rCZgXL89bSK8r3CJ7/oetZOlkrffvgw83CrwnpKs/mbs793NtRAFpBVx0Qgi2SEg7CsjBfyNcvO55o/wAgTbee/PMcjiLRw63cyDvAj7TdoVYkJaQ2fNvdSC4HvjjNrDBL6SUBKhqXkj8r9oJhyPDZ8kTvD4GP7TpBqA6hCvSYipUlz30LhqMm51luRptara79xp65HM9sojU1ys3pzv7wXHq8SCOke0fIzRJPDQ30YrE8S/JJPtChlH/lTj0eEW1O9tvlWUkzYlHzFhbankvDiLuVYPeVbesbWcVAbBoEZyUzc3j+/FP5qmfWgr8tmjeDjmYfIdz9Gw72z1ds+Tpon3pwA5mWnq7ZBleuPT+n3sFZF2jSWL1K2pgzfdZAbznc6g/hRBG8vTPCiySlC05ABOFD0Ue+qa41XjyZWC77XPdAqC8j+b3Zbsk=
+  bucket: designerj.de
+  local-dir: _site
+  skip_cleanup: true
+  on:
+    repo: jeaton/designerj.de

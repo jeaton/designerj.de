@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+<body id="page" data-spy="scroll" data-target=".navbar-nav" data-offset="80" class="appear-animate">
+  {% include preloader.html %}
+    {% include header.html %}
+    <div>
+      <div>
+      {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+    </body>
+</html>

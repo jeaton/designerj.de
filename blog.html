@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div id="pageWrapper" class="clearfix">
+  <!--Content Wrapper-->
+  <div class="contentWrapper">
+    <!--Blog Section-->
+    <section id="blog-main" class="clearfix bgColor2">
+      <!--Blog Header-->
+      <div class="mainBanner parallax" id="blog-header" data-background="/images/blog/hero.jpg">
+        <div class="parallax-overlay bg-strip"></div>
+        <div class="container">
+          <div class="banner">
+            <!--Header Content-->
+            <div class="center-content">
+              <!-- <p class="text-uppercase">Welcome to my</p> -->
+              <h1 class="text-uppercase">Blog</h1>
+            </div>
+            <!--/ Header Content-->
+          </div>
+        </div>
+      </div>
+      <!--/ Blog Header-->
+      <!--Blog Body-->
+      <div class="blog-body clearfix">
+        <div class="container">
+          <div class="row row-padding">
+            <!--Grid Container-->
+            <div id="blog-grid-container" class="cbp-l-grid-blog blog-2" data-caption="zoom" data-animation="fadeOut" data-gaphorizontal="50" data-gapvertical="60">
+              {% for post in site.posts %}
+              <div class="cbp-item print motion"> <a href="{{ post.url }}" class="cbp-caption">
+                <div class="cbp-caption-defaultWrap"> <img src="{{ post.image }}" alt="media"> </div>
+
+                </a>
+                <div class="cbp-content-wrapper">
+                  <div class="cbp-l-grid-blog-date text-uppercase">{{ post.date | date: "%b %-d, %Y" }}</div>
+                  <span class="underline"></span>
+                  <a href="{{ post.url }}" class="cbp-l-grid-blog-title">{{ post.title }}</a>
+                  <div class="cbp-l-grid-blog-desc">{{ post.teaser  | truncatewords:18 }}</div>
+                  <a class="cbp-l-caption-buttonLeft text-uppercase" href="{{ post.url }}">Read More <span class="circle-arrow pull-right"> <i class="fa fa-angle-right"></i> </span></a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Blog Body-->
+    </section>
+    <!--/ Blog Section-->
+  </div>
+  <!--/ Content Wrapper-->
+</div>

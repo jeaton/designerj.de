@@ -1,0 +1,36 @@
+<section id="blog" class="clearfix bgColor1">
+  <div class="container">
+    <div class="row row-padding">
+      <!--Section Title text-left-->
+      <div class="heading text-left wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s">
+        <div class="title-style-3">
+          <h2 class="text-uppercase"> Recent Posts</h2>
+          <span class="title-spt"></span>
+        </div>
+        <!--/ Section Title text-left-->
+        <div class="blog-body marT12 clearfix">
+            <div class="blog-grid">
+              {% for post in site.posts limit:3 %}
+              <div class="col-md-4 col-sm-6 blog-post-wrapper">
+                <div class="cbp-item wow fadeIn" data-wow-delay=".3s" data-wow-duration=".8s">
+                  <a href="{{ post.url }}" class="cbp-caption">
+                    <div class="cbp-caption-defaultWrap"> <img src="{{ post.image }}" alt="media" class="img-responsive"></div>
+                  </a>
+                <div class="cbp-content-wrapper bgColor2">
+                  <div class="cbp-l-grid-blog-date text-uppercase">{{ post.date | date: "%b %-d, %Y" }}</div>
+                  <span class="underline"></span>
+                    <a href="{{ post.url }}"  target="_blank" class="cbp-l-grid-blog-title">{{ post.title }}</a>
+                    <a class="cbp-l-caption-buttonLeft text-uppercase" href="{{ post.url }}">Read More
+                      <span class="circle-arrow pull-right"> <i class="fa fa-angle-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+               {% endfor %}
+              </div>
+            </div>
+        <!--Post Button-->
+      <div class="text-center post-btn"><a href="/blog" class="btn btn-dark"> All Posts</a></div>
+    </div>
+  </div>
+</section>
